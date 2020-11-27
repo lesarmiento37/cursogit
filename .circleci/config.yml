@@ -3,12 +3,12 @@ jobs:
   build:
     working_directory: ~/public
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:10.15.3
     steps:
       - checkout
-      - run:
-          name: flush-npm
-          command: "sudo rm /usr/local/bin/npm"
+      #- run:
+      #    name: flush-npm
+      #    command: "sudo rm /usr/local/bin/npm"
       - run:
           name: install-npm
           command: "sudo npm install -g npm@latest"
